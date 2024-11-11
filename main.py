@@ -68,7 +68,8 @@ def generate_response(input_text, history=None):
     input_ids = inputs["input_ids"]
     attention_mask = inputs["attention_mask"]
     
-    outputs = model.generate(input_ids, attention_mask=attention_mask, max_length=100, num_return_sequences=3, no_repeat_ngram_size=2)
+    outputs = model.generate(input_ids, attention_mask=attention_mask, max_length=100, num_return_sequences=1, no_repeat_ngram_size=2)
+
     
     responses = []
     for output in outputs:
